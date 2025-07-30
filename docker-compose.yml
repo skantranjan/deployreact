@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  sdp-ui:
+    image: sdp-ui
+    build:
+      context: ./sdp-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - sdp-api
+    networks:
+      - sdp-network
+
